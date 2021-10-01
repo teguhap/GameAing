@@ -1,0 +1,126 @@
+  var loop = 1
+
+            btn1.setOnClickListener {
+                dataUserSimon.add(1)
+                loop++
+              lifecycleScope.launch(Dispatchers.Main) {
+                  for (i in 0..loop) {
+                      val randomValue = simonList.random()
+                      dataPlaying.add(randomValue)
+
+                      for (j in 0 until dataPlaying.size - 1) {
+                          Log.d("MyActivity", "Item dataPlaying = ${dataPlaying[j]}")
+                          when (dataPlaying[j]) {
+                              1 -> {
+                                  delay(1000L)
+                                  btn1.rotation = 0f
+                                  btn1.animate().apply {
+                                      duration = 400
+                                      rotation(360f)
+                                  }.start()
+
+                              }
+                              2 -> {
+                                  delay(1000L)
+                                  btn2.rotation = 0f
+                                  btn2.animate().apply {
+                                      duration = 400
+                                      rotation(360f)
+                                  }.start()
+                              }
+                              3 -> {
+                                  delay(1000L)
+                                  btn3.rotation = 0f
+                                  btn3.animate().apply {
+                                      duration = 400
+                                      rotation(360f)
+                                  }.start()
+                              }
+                              4 -> {
+                                  delay(1000L)
+                                  btn4.rotation = 0f
+                                  btn4.animate().apply {
+                                      duration = 400
+                                      rotation(360f)
+                                  }.start()
+                              }
+                          } //tutup when
+                      }//tutup looping playingData
+
+                  }
+              }
+            }
+            btn2.setOnClickListener {
+                dataUserSimon.add(2)
+                loop++
+            }
+            btn3.setOnClickListener {
+                dataUserSimon.add(3)
+                loop++
+            }
+            btn4.setOnClickListener {
+                dataUserSimon.add(4)
+                loop++
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        }
+
+    suspend fun PlayingLoop(dataPlaying : ArrayList<Int>,dataUserSimon : ArrayList<Int>){
+        val btn1 = findViewById<Button>(R.id.btn1)
+        val btn2 = findViewById<Button>(R.id.btn2)
+        val btn3 = findViewById<Button>(R.id.btn3)
+        val btn4 = findViewById<Button>(R.id.btn4)
+        val simonList = arrayOf(1,2,3,4)
+
+        val randomValue = simonList.random()
+        dataPlaying.add(randomValue)
+
+        for (j in 0 until dataPlaying.size-1){
+            Log.d("MyActivity","Item dataPlaying = ${dataPlaying[j]}")
+            when(dataPlaying[j]){
+                1 -> {
+                    delay(1000L)
+                    btn1.rotation = 0f
+                    btn1.animate().apply {
+                        duration = 400
+                        rotation(360f)
+                    }.start()
+
+                }
+                2 -> {
+                    delay(1000L)
+                    btn2.rotation = 0f
+                    btn2.animate().apply {
+                        duration = 400
+                        rotation(360f)
+                    }.start()}
+                3 -> {
+                    delay(1000L)
+                    btn3.rotation = 0f
+                    btn3.animate().apply {
+                        duration = 400
+                        rotation(360f)
+                    }.start()}
+                4 -> {
+                    delay(1000L)
+                    btn4.rotation = 0f
+                    btn4.animate().apply {
+                        duration = 400
+                        rotation(360f)
+                    }.start()}
+            } //tutup when
+        }//tutup looping playingData
+
+    }
+
+

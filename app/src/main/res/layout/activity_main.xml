@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".page.MainActivity">
+
+
+
+
+    <ImageView
+        android:id="@+id/logoku"
+        android:layout_width="263dp"
+        android:layout_height="233dp"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo1"
+
+        />
+
+    <TextView
+        android:id="@+id/tvZatel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/offside"
+        android:shadowColor="@color/black"
+        android:text="@string/develop_by_zatel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoku"
+        tools:ignore="TextContrastCheck" />
+
+
+
+
+</LinearLayout>
